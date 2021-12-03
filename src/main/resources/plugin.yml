@@ -1,0 +1,9 @@
+name: DraimLogin
+main: me.draimgoose.draimlogin.DraimLogin
+author: DraimGooSe
+version: ${project.version}
+api-version: 1.13
+commands:
+  draimlogin:
+    description: main command
+    aliases: [dlogin, dl]

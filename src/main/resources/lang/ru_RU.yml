@@ -1,0 +1,121 @@
+prefix: "&8(&bDraim&fLogin&8)&r"
+errors:
+  in-game:
+    no-permission: "%prefix%&7: &cВ разрешении отказано."
+    invalid-value: "%prefix%&7: &cНедопустимое значение"
+    only-player: "%prefix%&7: &cКоманда, выполняемая только игроком"
+    target-without-draimLogin:
+      - "&cЭтого игрока не существует"
+      - "&cили его аккаунт не привязан к логину Telegram"
+    change-chat-id-usage: "%prefix%&7: &c/draimlogin changechatid [имя игрока] [Чатид]"
+    remove-usage: "%prefix%&7: &c/draimlogin remove [имя игрока]"
+    target-offline: "%prefix%&7: &cЦелевой объект отключен или не существует"
+    2FA:
+      cannot-remove: "%prefix%&7: 2FA отключен, вы не можете удалить свой логин в Telegram"
+      player-without-draimLogin: "%prefix%&7: &cУ вас нет учетной записи, связанной с входом в Telegram"
+      disabled: "%prefix%&7: &c2FA отключен!"
+      player-already2FA: "%prefix%&7: У вас уже есть 2FA"
+  telegram:
+    player-offline: "\u2757\uFE0F Вы находитесь в автономном режиме! Войдите на сервер \u2757\uFE0F"
+    chat-id-not-linked: "Этот идентификатор чата не связан ни с одной учетной записью minecraft"
+    account-id-not-linked: "\u2757\uFE0F Этот идентификатор учетной записи не существует или не принадлежит вам"
+    invalid-value: "Недопустимое значение"
+    unlock-usage: "Воспользуйся: /unlock Учетная запись"
+    lock-usage: "Воспользуйся: /lock Учетная запись"
+
+info:
+  telegram: #--------- Сообщения бота -------------------------------------------------------------------------
+    add-message:
+      - "\u2757\uFE0F Вход в Telegram - Запрос на вход в систему \u2757\uFE0F"
+      - "\U0001f464 Имя учетной записи: %player_name%"
+      - "Подтвердите настройку"
+      - "(Выберите, что вы хотите сделать)"
+    login-message:
+      - "\u2757\uFE0F Вход в Telegram - Запрос на вход в систему \u2757\uFE0F"
+      - "\U0001f464 Имя учетной записи: %player_name%"
+      - "\uD83C\uDF10 \u00BB %player_ip%"
+      - "(Выберите, что вы хотите сделать)"
+    locked-message:
+      - "\u2757\uFE0F Вход в Telegram заблокирован! \u2757\uFE0F"
+      - "Нажмите 'Unlock' перед входом."
+    locked-message-by-command:
+      - "\u2757\uFE0F Вход в Telegram заблокирован! \u2757\uFE0F"
+      - "Type /unlock чтобы разблокировать его"
+    unlocked-message: "\U0001f513 Вход в Telegram - Разблокирован!"
+    chat-id-confirmed:
+      - "\u2757\uFE0F Вход в систему Telegram - подтвержден идентификатор чата!"
+      - "\uD83D\uDFE2 Успешный вход в систему"
+      - "Вы можете вернуться в игру"
+    login-executed:
+      - "\u2757\uFE0F Вход в Telegram - Вход успешен!"
+      - "Вы можете вернуться в игру"
+    help-message:
+      - "\u27AA /help - чтобы просмотреть это сообщение"
+      - "\u27AA /chatid - чтобы получить свой идентификатор чата"
+      - "\u27AA /unlock - чтобы разблокировать свою учетную запись"
+      - "\u27AA /lock - чтобы заблокировать вашу учетную запись"
+    chat-id-message: "\U0001f4cb Ваш идентификатор чата: %chatId%"
+    start-message:
+      - "Вы успешно запустили бота!"
+      - "Это команды, которые вы можете выполнить:"
+      - ""
+      - "\u27AA /help - чтобы просмотреть это сообщение"
+      - "\u27AA /chatid - чтобы получить свой идентификатор чата"
+      - "\u27AA /unlock идентификатор учетной записи - для разблокировки вашей учетной записи"
+      - "\u27AA /lock идентификатор учетной записи - для блокировки вашей учетной записи"
+      - "\u27AA /accountlist - чтобы увидеть ваши учетные записи"
+    account-list:
+      message: "Список учетных записей: "
+      locked: "Запертый"
+      unlocked: "Разблокирован"
+      sintax: "\U0001f464 (%accountID%) %player_name%, статус учетной записи: %status%"
+    abort-button: "\u274C Отменить"
+    confirm-button: "\uD83D\uDFE2 Подтверждать"
+    lock-button: "\u26D4\uFE0F Замок"
+    unlock-button: "\uD83D\uDFE2 Разблокировка"
+    aborted: "\u274C Отмененный"
+    #------------------------------------------------------------------------------------------------
+  in-game:
+    account-list:
+      message: "&7Список учетных записей: "
+      locked: "Запертый"
+      unlocked: "Разблокирован"
+      sintax: "&8(&a%accountID%&8) &7%player_name%, статус учетной записи: %status%"
+    add-chat-id:
+      - "&8&m-------------------------------------------"
+      - "&cУбедитесь, что вы начали первым"
+      - "&cнаш бот: &b%bot_tag%&7."
+      - "&7Напишите свой идентификатор чата Telegram в чате"
+      - "&7Вы можете получить его с помощью нашего бота"
+      - "&8&m-------------------------------------------"
+    wait-for-confirm: "%prefix%&7: Проверьте бота, чтобы подтвердить свой идентификатор чата, а затем войдите в систему."
+    wait-for-login-confirm: "%prefix%&7: Проверьте бота, чтобы войти в систему."
+    operation-aborted: "%prefix%&7: Операция отменена"
+    kick-logagain: "%prefix%&7: Войдите снова."
+    kick-accountLocked: "%prefix%&7: Учетная запись заблокирована"
+    login-executed: "%prefix%&7: &bУспешный вход в систему."
+    chat-id-changed: "%prefix%&7: &bЧатид изменился."
+    target-removed: "%prefix%&7: Логин Telegram удален из &b%target%"
+    account-linked:
+      - "&8&m-------------------------------------------"
+      - "&bВы успешно привязали свой аккаунт к telegram!"
+      - "&8&m-------------------------------------------"
+    2FA:
+      account-disconnected: "%prefix%&7: Вы отключили свою учетную запись от входа в Telegram"
+      abort-2FA: "%prefix%&7: Тип &cвыкинуть &7чтобы отменить активацию 2FA."
+    login-session:
+      logged-automatically: "%prefix%&7: Вы прошли автоматическую аутентификацию (Сеанс входа в систему)."
+    help:
+      player:
+        - "%prefix% &7Доступные команды:"
+        - "&b/draimlogin accounts"
+        - "&b/draimlogin remove"
+        - "&b/draimlogin help"
+        - "&b/draimlogin 2fa"
+      admin:
+        - "&8&m-----------------------"
+        - "&b/draimlogin remove [Имя игрока]"
+        - "&b/draimlogin reload"
+        - "&b/draimlogin remove [Учетная запись]"
+        - "&b/draimlogin accounts [Имя игрока]"
+    reload-executed: "%prefix%&7: Конфигурация и язык перезагружены."

@@ -1,0 +1,4 @@
+name: DraimLogin
+version: '${version}'
+main: me.draimgoose.draimlogin.bungee.DraimLoginBungee
+author: DraimGooSe
